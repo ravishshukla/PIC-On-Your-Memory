@@ -65,6 +65,8 @@ while running:
         else:
             total_skip +=1
 
+    display.flip()
+    
     if len(current_images) == 2:
         idx1, idx2 = current_images
         if tiles[idx1].name == tiles[idx2].name:
@@ -74,12 +76,12 @@ while running:
             sleep(0.4)
             screen.blit(matched, (0, 0))
             display.flip()
-            sleep(0.4)
+            sleep(0.8)
             current_images = []
 
     if total_skipped == len(tiles):
         running = False
             
-    display.flip()
+    
 
 print('Goodbye!')
